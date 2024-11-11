@@ -32,7 +32,6 @@ import ProcessingIssueTable from "./process/ProcessTable";
 import DispatchStockIn from "./dispatch/Dispatch";
 import DispatchStockTable from "./dispatch/DispatchTable";
 
-
 import Finish from "./finish/Finish";
 import FinishTable from "./finish/FinishTable";
 
@@ -151,12 +150,21 @@ const App = () => {
             {/* -------------------Admin Tables Data---------------------- */}
 
             <Route path="admin-account-in-table" element={<AccountInTabl />} />
-            <Route path="admin-account-out-table" element={<AccountOutTabl />} />
+            <Route
+              path="admin-account-out-table"
+              element={<AccountOutTabl />}
+            />
             <Route path="admin-grey-stock-out" element={<GreyStockOutTabl />} />
             <Route path="admin-heat-table" element={<HeatIssueTabl />} />
-            <Route path="admin-process-table" element={<ProcessingIssueTabl />} />
+            <Route
+              path="admin-process-table"
+              element={<ProcessingIssueTabl />}
+            />
             <Route path="admin-finish-table" element={<FinishTabl />} />
-            <Route path="admin-dispatch-table" element={<DispatchStockTabl />} />
+            <Route
+              path="admin-dispatch-table"
+              element={<DispatchStockTabl />}
+            />
           </Route>
           <Route path="*" element={<NoPageFound />} />
         </Routes>

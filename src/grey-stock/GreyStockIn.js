@@ -228,7 +228,10 @@ const LotManagement = () => {
         })),
       };
 
-      const response = await axios.post("http://localhost:4000/api/lots", payload);
+      const response = await axios.post(
+        "http://localhost:4000/api/lots",
+        payload
+      );
       console.log("Response for new lot submission:", response.data);
 
       setTableData([]);
@@ -273,8 +276,8 @@ const LotManagement = () => {
   return (
     <div className="flex flex-col items-center">
       <ToastContainer position="top-center" />
-      <div className="border-2 w-full sm:w-[500px] rounded-lg h-[170px] lg:h-[150px] overflow-hidden">
-        <div className="mt-4 ml-4 font-semibold">Grey - Stock IN</div>
+      <div className="border-2 w-full sm:w-[500px] rounded-lg h-[170px] lg:h-[148px] overflow-hidden">
+        <div className="mt-4 ml-4 text-3xl font-semibold">Grey - Stock IN</div>
         <div className="bg-black w-full h-[1px] mt-4"></div>
         <div className="font-login mt-3 flex lg:flex-row flex-col">
           <span className="text-blue-700 ml-4 text-xs font-login">
@@ -284,9 +287,12 @@ const LotManagement = () => {
             Change Account
           </span>
         </div>
-        <div className="bg-darkgray h-3 mt-2"></div>
+        <div className="bg-darkgray h-3 mt-8"></div>
       </div>
-      <form className="flex flex-col sm:w-[500px] w-full items-center" onSubmit={handleSubmit}>
+      <form
+        className="flex flex-col sm:w-[500px] w-full items-center"
+        onSubmit={handleSubmit}
+      >
         <div className="border-2 w-full sm:w-[500px] h-full rounded-lg mt-6 shadow-sm shadow-darkgray">
           <label className="block text-lg font-login ml-4 mt-4 text-gray-700">
             Lot Number <span className="text-red-600">*</span>
